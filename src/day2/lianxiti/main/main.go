@@ -5,12 +5,12 @@ package main
 
 import (
 	"fmt"
-	"learn_golang/src/day2/lianxiti/cal"
+	a "learn_golang/src/day2/lianxiti/cal"
 )
 
 func main() {
-	fmt.Printf("%s\n", cal.Name1)
-	fmt.Printf("%s\n", cal.Name2)
-	cal.Add(10)
+	a.Add(10)
+	fmt.Printf("%s\n", a.Name1)
+	fmt.Printf("%s\n", a.Name2)
 
 }
