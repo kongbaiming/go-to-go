@@ -66,5 +66,25 @@ func main() {
 	/*strings.Fields(s) 将会利用 1 个或多个空白符号来作为动态长度的分隔符将字符串分割成若干小块，
 	并返回一个 slice，如果字符串只包含空白符号，则返回一个长度为 0 的 slice。
 	strings.Split(s, sep) 用于自定义分割符号来对指定字符串进行分割，同样返回 slice*/
-
+	fmt.Println(strings.Fields(str1))
+	fmt.Println(len(strings.Fields(str1)))
+	fmt.Println(strings.Split(str1, "example"))
+	fmt.Println(len(strings.Split(str1, "example")))
+	//Join 用于将元素类型为 string 的 slice 使用分割符号来拼接组成一个字符串
+	str_1 := "There's a girl but I let her get away"
+	sl := strings.Fields(str_1)
+	fmt.Printf("Splitted in slice: %v\n", sl)
+	for _, val := range sl {
+		fmt.Printf("%s * ", val)
+	}
+	fmt.Println()
+	str_2 := "It's all my fault cause pride got in the way"
+	sl2 := strings.Split(str_2, "'")
+	fmt.Printf("Splitted in slice: %v\n", sl2)
+	for _, val := range sl2 {
+		fmt.Printf("%s - ", val)
+	}
+	fmt.Println()
+	str_3 := strings.Join(sl2, ";")
+	fmt.Printf("sl2 joined by ;: %s\n", str_3)
 }
