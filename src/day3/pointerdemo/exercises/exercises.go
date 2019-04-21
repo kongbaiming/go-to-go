@@ -8,6 +8,7 @@ func main() {
 	fmt.Printf("num的内存地址是:%v\n",&num)
 	var ptr *int = &num
 	fmt.Printf("ptr指向的内存地址是:%v\n",ptr)
-	num1 := *ptr 
+	*ptr = 22 //修改num的值
+	fmt.Printf("num的值是:%v\n",num)
 }
 
